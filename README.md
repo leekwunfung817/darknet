@@ -1,21 +1,17 @@
 # Yolo-v3-tiny just for Windows 10
 ### [Windows](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows)
 
-[How to use](#how-to-use)
-[How to compile on Windows](#how-to-compile-on-windows)
-[How to train (Pascal VOC Data)](#how-to-train-pascal-voc-data)
-[How to train (to detect your custom objects)](#how-to-train-to-detect-your-custom-objects)
-[When should I stop training](#when-should-i-stop-training)
-[How to calculate mAP on PascalVOC 2007](#how-to-calculate-map-on-pascalvoc-2007)
-[How to improve object detection](#how-to-improve-object-detection)
-[How to mark bounded boxes of objects and create annotation files](#how-to-mark-bounded-boxes-of-objects-and-create-annotation-files)
-[Using Yolo9000](#using-yolo9000)
-[How to use Yolo as DLL](#how-to-use-yolo-as-dll)
+1. [How to use](#how-to-use)
+2. [How to compile on Windows](#how-to-compile-on-windows)
+3. [How to train (Pascal VOC Data)](#how-to-train-pascal-voc-data)
+4. [How to train (to detect your custom objects)](#how-to-train-to-detect-your-custom-objects)
+5. [When should I stop training](#when-should-i-stop-training)
+6. [How to calculate mAP on PascalVOC 2007](#how-to-calculate-map-on-pascalvoc-2007)
+7. [How to improve object detection](#how-to-improve-object-detection)
+8. [How to mark bounded boxes of objects and create annotation files](#how-to-mark-bounded-boxes-of-objects-and-create-annotation-files)
+9. [Using Yolo9000](#using-yolo9000)
+10. [How to use Yolo as DLL](#how-to-use-yolo-as-dll)
 
-
-
-|  ![Darknet Logo](http://pjreddie.com/media/files/darknet-black-small.png) | &nbsp; ![map_fps](https://hsto.org/webt/pw/zd/0j/pwzd0jb9g7znt_dbsyw9qzbnvti.jpeg) mAP (AP50) https://pjreddie.com/media/files/papers/YOLOv3.pdf |
-|---|---|
 
 * YOLOv3-spp (is not indicated) better than YOLOv3 - mAP = 60.6%, FPS = 20: https://pjreddie.com/darknet/yolo/
 * Yolo v3 source chart for the RetinaNet on MS COCO got from Table 1 (e): https://arxiv.org/pdf/1708.02002.pdf
