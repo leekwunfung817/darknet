@@ -1,8 +1,6 @@
 # Yolo-v3-tiny just for Windows 10
 ### [Windows](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows)
 
-[![CircleCI](https://circleci.com/gh/AlexeyAB/darknet.svg?style=svg)](https://circleci.com/gh/AlexeyAB/darknet)
-
 [How to use](#how-to-use)
 [How to compile on Windows](#how-to-compile-on-windows)
 [How to train (Pascal VOC Data)](#how-to-train-pascal-voc-data)
