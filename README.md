@@ -1,6 +1,121 @@
 # Yolo-v3-tiny just for Windows 10
 ### [Windows](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows)
 
+Installation Step
+
+I may share the Windows 10 installation step to another people, avoid the other to waste time.
+
+# With NVIDIA GPU
+
+- Windows 10
+- GPU NVIDIA GeForce GT 710
+
+**Install Step (by Order):**
+1. install Visual Studio 2015 Update 3
+- [ ] https://download.microsoft.com/download/4/8/f/48f0645f-51b6-4733-b808-63e640cddaec/vs2015.3.exe
+
+2. download OpenCV 3.4.0
+- [ ] https://nchc.dl.sourceforge.net/project/opencvlibrary/opencv-win/3.4.0/opencv-3.4.0-vc14_vc15.exe
+
+3. install NVIDIA Cuda 9.1
+- [ ] https://developer.download.nvidia.com/compute/cuda/9.1/secure/Prod/local_installers/cuda_9.1.85_win10.exe?nCAjZE0jUxSE-AcJXMlPk4A3evyLV-gHoreH1tYsooan2BDHNIbM2c4hwYCsVz1DxuPIrVqCqffEipmpGI9EBoXGzuX5C9A05yvvN6S0HBWexrtupkQlXlDGdSGu-5znSfriBqbbPzDWdMBiWc8n-9jl2rC7_6oCI2BYGDX1a1fL-Q
+
+4. download NVIDIA CuDNN 7
+- [ ] https://developer.download.nvidia.com/compute/machine-learning/cudnn/secure/v7.0.5/prod/9.1_20171129/cudnn-9.1-windows10-x64-v7.zip?gLSaZu2MVANj6BmRhbWbgraHeB4D67aB_223v2QqgdM60BxkRCpWK5wmi2TE8-3FjaTdIxJwabY_wakOSogwnRZIcS5dcnG3T0SZ3GnbKR7Rc_VlLmaU792mgc7d4t6ro0_4OZiVqeysiKOeNLv8_LjC9B7-kwl8sISwXgVpp23qr80UdZ-wpDPhU7txxQhW2sh1A8FFJhdxbYX9
+
+Complie Step:
+put CuDNN to NVIDIA GPU Computing Toolkit
+setup the darknet.sln properties
+
+- [ ] (cudnn-9.1-windows10-x64-v7\cuda\bin\cudnn64_7.dll) to (C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin)
+- [ ] (cudnn-9.1-windows10-x64-v7\cuda\lib\x64\cudnn.lib) to (C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64)
+
+- [ ] (cudnn-9.1-windows10-x64-v7\cuda\include\cudnn.h) to (C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include)
+
+1. Set project 
+- [ ] Release
+- [ ] x64
+![untitled](https://user-images.githubusercontent.com/18736700/44627489-797da780-a961-11e8-8efc-55a4239d1322.png)
+
+(Right click darknet project) > (Click Properties)
+
+2. Configuration Properties > C/C++ > Additional include Directories
+add 
+- [ ] D:\opencv_3.4.0\build\include
+- [ ] D:\opencv_3.4.0\build\include\opencv
+- [ ] D:\opencv_3.4.0\build\include\opencv2
+![untitled](https://user-images.githubusercontent.com/18736700/44627509-bf3a7000-a961-11e8-98ca-f628da7efd91.png)
+
+3. Configuration Properties > Linker > Input > Additional Dependencies
+add 
+- [ ] D:\opencv_3.4.0\build\x64\vc14\lib\opencv_world340.lib
+- [ ] D:\opencv_3.4.0\build\x64\vc14\lib\opencv_world340d.lib
+![untitled](https://user-images.githubusercontent.com/18736700/44627524-f01aa500-a961-11e8-8ddd-1e2e11efb6c9.png)
+
+
+3. Configuration Properties > CUDA C/C++ > CUDA Toolkit Custom Dir
+add 
+- [ ] C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA
+![untitled](https://user-images.githubusercontent.com/18736700/44627533-0aed1980-a962-11e8-8f8b-5eba700d484d.png)
+
+
+**Please use in the MS-DOS  command**
+darknet-master\build\darknet\x64\darknet.exe
+
+**1. GPU (darknet.sln)**
+Finally Build Success
+But two warnings
+![image](https://user-images.githubusercontent.com/18736700/44625883-285fba80-a945-11e8-914f-78738cee6f1f.png)
+
+
+
+
+
+
+# Without GPU
+- Windows 10
+
+**Install Step (by Order):**
+1. install Visual Studio 2015 Update 3
+- [ ] https://download.microsoft.com/download/4/8/f/48f0645f-51b6-4733-b808-63e640cddaec/vs2015.3.exe
+
+2. download OpenCV 3.3.0
+- [ ] https://nchc.dl.sourceforge.net/project/opencvlibrary/opencv-win/3.3.0/opencv-3.3.0-vc14.exe
+
+Complie Step:
+
+1. Set project 
+- [ ] Release
+- [ ] x64
+![untitled](https://user-images.githubusercontent.com/18736700/44627489-797da780-a961-11e8-8efc-55a4239d1322.png)
+
+
+(Right click darknet_no_gpu project) > (Click Properties)
+2. Configuration Properties > C/C++ > Additional include Directories
+add 
+- [ ] D:\opencv_3.3.0\build\include
+- [ ] D:\opencv_3.3.0\build\include\opencv
+- [ ] D:\opencv_3.3.0\build\include\opencv2
+![untitled](https://user-images.githubusercontent.com/18736700/44627551-6d461a00-a962-11e8-8ead-9af4f3c0d369.png)
+
+
+3. Configuration Properties > Linker > Input > Additional Dependencies
+add 
+- [ ] D:\opencv_3.3.0\build\x64\vc14\lib\opencv_world330.lib
+- [ ] D:\opencv_3.3.0\build\x64\vc14\lib\opencv_world330d.lib
+![untitled](https://user-images.githubusercontent.com/18736700/44627557-86e76180-a962-11e8-8c28-2558f0ea341a.png)
+
+
+**Please use in the MS-DOS  command**
+darknet-master\build\darknet\x64\darknet_no_gpu.exe
+
+Build Success
+![image](https://user-images.githubusercontent.com/18736700/44627141-39b3c180-a95b-11e8-9813-0def6c77f065.png)
+
+
+
+
+
 1. [How to use](#how-to-use)
 2. [How to compile on Windows](#how-to-compile-on-windows)
 3. [How to train (Pascal VOC Data)](#how-to-train-pascal-voc-data)
@@ -57,8 +172,6 @@ Others: https://www.youtube.com/channel/UC7ev3hNVkx4DzZ3LO19oebg
 street4k.mp4, and store result to: res.avi
 
 ##### How to use on the command line:
-
-On Linux use `./darknet` instead of `darknet.exe`, like this:`./darknet detector test ./cfg/coco.data ./cfg/yolov3.cfg ./yolov3.weights`
 
 * **Yolo v3** COCO - image: `darknet.exe detector test data/coco.data cfg/yolov3.cfg yolov3.weights -i 0 -thresh 0.25`
 * Alternative method Yolo v3 COCO - image: `darknet.exe detect cfg/yolov3.cfg yolov3.weights -i 0 -thresh 0.25`
