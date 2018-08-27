@@ -1,6 +1,4 @@
 # Yolo-v3-tiny just for Windows 10
-### [Windows](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows)
-
 Installation Step
 
 I may share the Windows 10 installation step to another people, avoid the other to waste time.
