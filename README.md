@@ -1,4 +1,4 @@
-# Yolo-v3-tiny just for Windows 10
+# Yolo-v3 just for Windows 10
 Installation Step
 
 I may share the Windows 10 installation step to another people, avoid the other to waste time.
